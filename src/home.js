@@ -1,6 +1,13 @@
 export default function(){
     const heroText = document.querySelector('.hero-text');
-    
+    const heroBg = document.querySelector('.hero-bg');
+    heroBg.className = 'hero-bg';
+
+    if(heroText.children.length > 1){
+        if(heroText.children[1].className === 'footer') return;
+        heroText.removeChild(heroText.children[1]);
+    }
+
     const footer = document.createElement('div');
     footer.className = 'footer';
     
