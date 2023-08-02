@@ -1,3 +1,5 @@
+import generateHome from "./home.js";
+import generateAbout from "./about.js"
 export default function(){
     const content = document.getElementById('content');
 
@@ -16,6 +18,7 @@ export default function(){
     logo.classList.add('logo');
     logo.textContent = 'enchanté';
     head.appendChild(logo);
+    logo.addEventListener('click', generateHome);
     
     const navbar = document.createElement('nav');
     navbar.classList.add('navbar');
@@ -41,6 +44,7 @@ export default function(){
     menuHref.textContent = 'Menu';
     contactHref.textContent = 'Contact';
     
+    aboutHref.addEventListener('click', generateAbout);
     // Append content to li
     aboutLi.appendChild(aboutHref);
     menuLi.appendChild(menuHref);
