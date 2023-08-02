@@ -30,6 +30,10 @@ body, html{
     background-size: cover;
     background-repeat: no-repeat;
 }
+.about{
+    background:none;
+    background-color: #000;
+}
 .hero-text{
     overflow-y: auto;
 }
@@ -148,4 +152,19 @@ body, html{
     svg{
         fill:black;
     }
+}
+.body{
+    color: white;
+    padding: 25px;
+    font-family: "Montserrat";
+    h1,h2{
+        font-weight: 300;
+    }
+}
+h1{
+    font-size: 2.5rem;
+}
+p{
+    font-size: 2.5rem;
+    width: 92%;
 }
