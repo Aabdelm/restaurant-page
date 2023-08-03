@@ -2,6 +2,8 @@ import "./style.scss"
 import background from './countryside.jpg'
 import generateHome from "./home.js";
 import generateNavBar from "./navbar.js"
+import about from "./about.js"
+
 /*
     With the navbar, the content should be 
     <!DOCTYPE html>
