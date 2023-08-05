@@ -23,13 +23,23 @@ body, html{
     height: 100%;
 }
 .hero-bg{
+    transition: background-size 0.3s ease;
     display: flex;
     height: 100vh;
     background: url("./countryside.jpg");
     background-position: center center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    &.menu-mode{
+        background-size: 110%;
+    }
+}
+.menu-mode{
+    background: url("./fruit.jpg");
+    background-position: center center;
     background-repeat: no-repeat;
 }
+
+
 .about{
     background:none;
     background-color: #000;
@@ -101,6 +111,8 @@ body, html{
     background-color: rgba(0,0,0,0.3);
 }
 .head{
+    top: 10px;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -175,4 +187,75 @@ h1{
 p{
     font-size: 2.5rem;
     width: 92%;
+}
+.menu{
+    transform: 0.3s ease;
+    height: 80%;
+    font-family: "Lora";
+    color: white;
+}
+.menu-info{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10%;
+}
+.menu-info h1{
+    font-weight: 400;
+    font-size: 70px;
+    position: relative;
+    &::after{
+        content: '';
+        transition: transform 0.5s ease-out;
+        position: absolute;
+        display: block;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        transform: scaleX(0);
+        transform-origin: left;
+    }  
+    &.extend{
+        &::after{
+            transform: scaleX(1);
+        }
+    }
+}
+#arrow-left, #arrow-right{
+    display: block;
+    position: relative;
+    transition: opacity 0.3s ease;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+#arrow-left{
+   position: relative;
+    transform: rotate(180deg);
+    &:hover{
+        right: 5;
+    }
+}
+.test{
+    background-color: #000;
+}
+.menu-items{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    font-family: "Lora";
+}
+.placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrow-bottom{
+    position: absolute;
+    bottom: 0;
+    transform: rotate(90deg);
 }
