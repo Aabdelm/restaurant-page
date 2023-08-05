@@ -29,6 +29,7 @@ body, html{
     background: url("./countryside.jpg");
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: 100%;
     &.menu-mode{
         background-size: 110%;
     }
@@ -248,6 +249,7 @@ p{
     width: 100%;
     background-color: #000;
     font-family: "Lora";
+    padding: 20px;
 }
 .placeholder{
     display: flex;
@@ -257,5 +259,14 @@ p{
 #arrow-bottom{
     position: absolute;
     bottom: 0;
-    transform: rotate(90deg);
+    rotate: 90deg;
+    animation: 1.5s linear 0s infinite alternate hover;
+}
+@keyframes hover {
+    from{
+        transform: translateX(5px);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
