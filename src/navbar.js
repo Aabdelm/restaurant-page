@@ -1,5 +1,10 @@
 import generateHome from "./home.js";
 import generateAbout from "./about.js"
+
+const resetClicks = () =>{
+    const active = document.querySelector('.active');
+    if(active !== null ) active.classList.remove('active');
+}
 export default function(){
     const content = document.getElementById('content');
 
@@ -18,8 +23,10 @@ export default function(){
     logo.classList.add('logo');
     logo.textContent = 'enchanté';
     head.appendChild(logo);
-    logo.addEventListener('click', generateHome);
-    
+    logo.addEventListener('click', ()=> {
+        resetClicks();
+        generateHome();
+    });
     const navbar = document.createElement('nav');
     navbar.classList.add('navbar');
     
@@ -44,7 +51,20 @@ export default function(){
     menuHref.textContent = 'Menu';
     contactHref.textContent = 'Contact';
     
-    aboutHref.addEventListener('click', generateAbout);
+    aboutHref.addEventListener('click', ()=>{
+        resetClicks();
+        aboutHref.classList.add('active');
+        generateAbout();
+    });
+    menuHref.addEventListener('click', ()=>{
+        resetClicks();
+        menuHref.classList.add('active');
+    });
+    contactHref.addEventListener('click', ()=>{
+        resetClicks();
+        contactHref.classList.add('active');
+    });
+
     // Append content to li
     aboutLi.appendChild(aboutHref);
     menuLi.appendChild(menuHref);
