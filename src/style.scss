@@ -249,7 +249,8 @@ p{
     width: 100%;
     background-color: #000;
     font-family: "Lora";
-    padding: 20px;
+    padding: 125px 25px;
+    font-size: 2rem;
 }
 .placeholder{
     display: flex;
@@ -269,4 +270,25 @@ p{
     to{
         transform: translateX(0);
     }
+}
+.menu-header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu-header{
+    border-bottom: solid white 3px;
+}
+.menu-item{
+    border-bottom: solid white 1px;
+    header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+.description{
+    font-size: 1.25rem;
+    color: rgb(215, 204, 204);
+    padding-left: 3px;
 }
