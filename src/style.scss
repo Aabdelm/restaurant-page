@@ -106,6 +106,7 @@ body, html{
 }
 
 .hero-text{
+    transition: background-color 0.2s ease;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -167,7 +168,6 @@ body, html{
 }
 #reservation-button:hover{
     cursor: pointer;
-    
     background-color: white;
     color: black;
     svg{
@@ -206,6 +206,7 @@ p{
     font-weight: 400;
     font-size: 70px;
     position: relative;
+    transition: all 0.5s ease-out;
     &::after{
         content: '';
         transition: transform 0.5s ease-out;
@@ -228,18 +229,19 @@ p{
 #arrow-left, #arrow-right{
     display: block;
     position: relative;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
     &:hover{
         cursor: pointer;
         opacity: 0.7;
+        transform: translateX(5px);
     }
 }
 #arrow-left{
    position: relative;
-    transform: rotate(180deg);
-    &:hover{
-        right: 5;
-    }
+   rotate: 180deg;
+}
+#arrow-right{
+    margin-right: 5px;
 }
 .test{
     background-color: #000;
