@@ -9,6 +9,8 @@ export default function(){
     const heroText = document.querySelector('.hero-text');
     const heroBg = document.querySelector('.hero-bg');
     heroBg.className = 'hero-bg';
+    heroBg.removeAttribute('style');
+    
     heroBg.style.background = `url(${defaultBackground})`;
     heroBg.style.backgroundPosition = 'center center';
     heroBg.style.backgroundSize = 'cover';

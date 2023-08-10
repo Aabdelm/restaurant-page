@@ -5,6 +5,8 @@ export default function(){
     // If the second child (that isn't the navbar) is the about body, then we dont
     // remove anything
     if(heroText.children[1].className === 'body') return ;
+    heroBg.style.background = '#000';
+    heroBg.removeAttribute('style');
     
     heroText.removeChild(heroText.children[1]);
     const body = document.createElement('div');
