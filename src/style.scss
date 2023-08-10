@@ -30,7 +30,14 @@ body, html{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+@media only screen and (max-width: 1100px) {
+    //for when the device is minimized
+    //Unfortunately, some of the animations won't play properly
+    //This is due to the background size having to be manipulated
+    .hero-bg{
+        background-size: cover !important;
+    }
+}
 
 .about{
     background:none;
@@ -240,12 +247,18 @@ p{
     background-color: #000;
 }
 .menu-items{
-    height: 150vh;
+    height: 110vh;
     width: 100%;
     background-color: #000;
     font-family: "Lora";
     padding: 125px 25px;
     font-size: 2rem;
+}
+@media only screen and (max-width: 1100px) {
+     .menu-items{
+        height: 125vh !important;
+     }
+     
 }
 .placeholder{
     display: flex;
