@@ -1,13 +1,12 @@
 @font-face {
     font-family: "Lora";
-    src: url("./Lora-VariableFont_wght.ttf") format("truetype"),
-    url("./Lora-Italic-VariableFont_wght.ttf") format("truetype");
+    src: url("../src/Lora-VariableFont_wght.ttf") format("truetype"),
+    url("../src/Lora-Italic-VariableFont_wght.ttf") format("truetype");
 
 }
 @font-face {
     font-family: "Montserrat";
-    src: url("./Montserrat-VariableFont_wght.ttf") format("truetype"),
-    url("./Montserrat-Italic-VariableFont_wght.ttf") ("truetype");
+    src: url("../src/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 *{
     margin: 0;
@@ -29,15 +28,7 @@ body, html{
     background: url("./countryside.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    &.menu-mode{
-        background-size: 110%;
-    }
-}
-.menu-mode{
-    background: url("./fruit.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -249,7 +240,7 @@ p{
     background-color: #000;
 }
 .menu-items{
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     background-color: #000;
     font-family: "Lora";
