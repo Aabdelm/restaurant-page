@@ -1,5 +1,7 @@
 import generateHome from "./home.js";
 import generateAbout from "./about.js"
+import initialMenuLoad from "./initialLoad.js"
+import menucontroller from "./menucontroller.js";
 
 const resetClicks = () =>{
     const active = document.querySelector('.active');
@@ -15,7 +17,7 @@ export default function(){
     heroText.classList.add('hero-text');
     // Code for header
     //Note that this will be merged into the main content later
-    const head = document.createElement('head');
+    const head = document.createElement('div');
     head.classList.add('head');
     
     const logo = document.createElement('a');
@@ -59,6 +61,8 @@ export default function(){
     menuHref.addEventListener('click', ()=>{
         resetClicks();
         menuHref.classList.add('active');
+        initialMenuLoad();
+        menucontroller();
     });
     contactHref.addEventListener('click', ()=>{
         resetClicks();
