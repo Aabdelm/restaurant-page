@@ -1,7 +1,18 @@
+import defaultBackground from '../src/countryside.jpg'
+import breakfastTest from '../src/breakfast.jpg'
+
+//just a preload
+(new Image().src) = breakfastTest;
+(new Image().src) = defaultBackground;
+
 export default function(){
     const heroText = document.querySelector('.hero-text');
     const heroBg = document.querySelector('.hero-bg');
     heroBg.className = 'hero-bg';
+    heroBg.style.background = `url(${defaultBackground})`;
+    heroBg.style.backgroundPosition = 'center center';
+    heroBg.style.backgroundSize = 'cover';
+
 
     if(heroText.children.length > 1){
         if(heroText.children[1].className === 'footer') return;
