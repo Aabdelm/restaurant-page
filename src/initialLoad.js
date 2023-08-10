@@ -1,12 +1,20 @@
 import arrow from '../src/menuarrow.svg'
+import breakfastImg from '../src/breakfast.jpg'
 import "./style.scss"
+
+
 export default function (){
     const heroText = document.querySelector('.hero-text');
     heroText.removeChild(heroText.children[1]);
 
     const heroBg = document.querySelector('.hero-bg');
+    [...heroBg.classList].filter(heroClass => heroClass !== 'hero-bg');
     heroBg.classList.add('menu-mode');
-    
+    heroBg.style.background = `url(${breakfastImg})`;
+    heroBg.style.backgroundPosition = `center center`;
+    heroBg.style.backgroundRepeat = 'no-repeat';
+    heroBg.style.backgroundSize = '110%';
+    setTimeout(()=> {heroBg.style.backgroundSize = '100%'},350);
     const menu = document.createElement('div');
     menu.className = 'menu';
     
@@ -18,7 +26,7 @@ export default function (){
     
     const rightArrow= document.createElement('img');
     rightArrow.src = arrow;
-    rightArrow.id = 'arrow-right;'
+    rightArrow.id = 'arrow-right';
     menuInfo.appendChild(rightArrow);
     
     const leftArrow = document.createElement('img');
@@ -32,6 +40,7 @@ export default function (){
     const courseText = document.createElement('h1');
     courseText.className = 'course';
     courseText.textContent = 'Breakfast';
+    setTimeout(()=>courseText.classList.add('extend') ,0);
     placeholder.appendChild(courseText);
     
     const bottomArrow = document.createElement('img');
@@ -106,10 +115,9 @@ export default function (){
     
         const description = document.createElement('div');
         description.textContent = item.description;
+        description.classList.add('description');
         menuItem.appendChild(description);
     
     });
-    heroText.appendChild(menu);
-    
-    
+    heroText.appendChild(menu);    
 }
