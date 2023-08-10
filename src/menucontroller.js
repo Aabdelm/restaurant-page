@@ -2,15 +2,7 @@ import breakfastImg from '../src/breakfast.jpg'
 import lunchImg from '../src/lunch.jpg'
 import dinnerImg from '../src/dinner.jpg'
 export default function(){
-    const after = document.querySelector('.menu-info').querySelector('h1');
     const menu = document.querySelector('.menu-mode');
-    // Xperimental
-    // This seems to be fixing an issue with chrome animations 
-    setTimeout(() => {
-        after.classList.add('extend');
-        menu.style.backgroundSize = '100%';
-    }, 150);
-
 
     const injectCourse = (item) =>{
         //Hide the background for visual effect
