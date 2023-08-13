@@ -1,5 +1,7 @@
 import defaultBackground from '../src/countryside.jpg'
 import breakfastTest from '../src/breakfast.jpg'
+import loadReservations from "./reservations.js"
+import reservationChecker from './reservationchecker.js';
 
 //just a preload
 (new Image().src) = breakfastTest;
@@ -43,6 +45,10 @@ export default function(){
     const reservationButton = document.createElement('button');
     reservationButton.type = 'button';
     reservationButton.id = 'reservation-button';
+    reservationButton.addEventListener(`click`, ()=>{
+        loadReservations();
+        reservationChecker();
+    })
     
     const reservationText = document.createElement('h1');
     reservationText.textContent = 'Reservations';
