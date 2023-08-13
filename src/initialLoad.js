@@ -5,6 +5,7 @@ import "./style.scss"
 
 export default function (){
     const heroText = document.querySelector('.hero-text');
+    if(heroText.children[1].className === 'menu') return; 
     heroText.removeChild(heroText.children[1]);
 
     const heroBg = document.querySelector('.hero-bg');
