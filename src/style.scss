@@ -300,3 +300,15 @@ p{
     color: rgb(215, 204, 204);
     padding-left: 3px;
 }
+.contact-mode{
+    background: #000;
+}
+.contact{
+    padding: 33px 23px;
+    color: #fff;
+    font-family: "montserrat";
+    font-size: 1rem;
+    :nth-child(2), :nth-child(n+4){
+        padding-top: 20px;
+    }
+}
