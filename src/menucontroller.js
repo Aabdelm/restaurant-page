@@ -92,9 +92,13 @@ export default function(){
     }; 
 
 
-    const lunch = course("Lunch");
     let current = 0;
+    const courseNameDiv = document.querySelector('.course').textContent;
+    if(courseNameDiv === 'Lunch') current = 1;
+    else if(courseNameDiv === 'Dinner') current = 2;
 
+
+    const lunch = course("Lunch");
     // Pulled from an earlier test
     lunch.addExistingCourse([{
         item: 'Seared Sea Scallop Risotto',
