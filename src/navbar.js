@@ -1,7 +1,8 @@
 import generateHome from "./home.js";
 import generateAbout from "./about.js"
 import initialMenuLoad from "./initialLoad.js"
-import menucontroller from "./menucontroller.js";
+import menucontroller from "./menucontroller.js"
+import generateContact from "./contact.js"
 
 const resetClicks = () =>{
     const active = document.querySelector('.active');
@@ -67,6 +68,7 @@ export default function(){
     contactHref.addEventListener('click', ()=>{
         resetClicks();
         contactHref.classList.add('active');
+        generateContact();
     });
 
     // Append content to li
