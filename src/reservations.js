@@ -11,6 +11,7 @@ export default function(){
     
     const entrance = document.createElement('div');
     entrance.className = 'entrance';
+    entrance.textContent  = 'Hover over each table for more.';
     reservations.appendChild(entrance);
     
     const text = document.createElement('div');
