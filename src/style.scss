@@ -184,6 +184,15 @@ body, html{
     h1,h2{
         font-weight: 300;
     }
+    h1{
+        font-size: clamp(2.5rem, -12.5588rem + 18.8235vw, 3.7rem);
+    }
+    h2{
+        font-size: clamp(1.5rem, -9.0412rem + 13.1765vw, 2.2rem);
+    }
+    p{
+        font-size: clamp(2.5rem, -12.5588rem + 18.8235vw, 4rem);
+    }
 }
 h1{
     font-size: 2.5rem;
@@ -296,10 +305,11 @@ p{
         display: flex;
         width: 100%;
         justify-content: space-between;
+        font-size: clamp(2rem, -28.1176rem + 37.6471vw, 3.7rem);
     }
 }
 .description{
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, -10.0441rem + 14.1176vw, 2rem);
     color: rgb(215, 204, 204);
     padding-left: 3px;
 }
