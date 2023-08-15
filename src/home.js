@@ -26,7 +26,7 @@ export default function(){
     const footer = document.createElement('div');
     footer.className = 'footer';
     
-    const greet = document.createElement('greet');
+    const greet = document.createElement('div');
     greet.className = 'greet';
     
     const date = new Date();
