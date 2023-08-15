@@ -135,7 +135,7 @@ body, html{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 36px;
+    padding-bottom: 25px;
     font-family: "Lora";
     color: white;
     padding-left: 25px;
@@ -184,18 +184,11 @@ body, html{
     h1,h2{
         font-weight: 300;
     }
-    p{
-        font-size: clamp(2.5rem, -12.5588rem + 18.8235vw, 4rem);
-    }
-    h2{
-        font-size: clamp(1.5rem, -9.0412rem + 13.1765vw, 2.2rem);
-    }
-    h1{
-        font-size: clamp(2.5rem, -12.5588rem + 18.8235vw, 3.7rem);
-    }
+}
+h1{
+    font-size: 2.5rem;
 }
 p{
-    
     width: 92%;
 }
 .menu{
@@ -264,9 +257,6 @@ p{
     font-family: "Lora";
     padding: 125px 25px;
     font-size: 2rem;
-    header{
-        font-size: clamp(2rem, -28.1176rem + 37.6471vw, 3.7rem);
-    }
 }
 @media only screen and (max-width: 1100px) {
      .menu-items{
@@ -296,10 +286,9 @@ p{
 .menu-header{
     display: flex;
     justify-content: space-between;
-    
-}
-.menu-header{
+    font-size: clamp(2rem, -28.1176rem + 37.6471vw, 3.4rem);
     border-bottom: solid white 3px;
+    
 }
 .menu-item{
     border-bottom: solid white 1px;
@@ -310,7 +299,7 @@ p{
     }
 }
 .description{
-    font-size: clamp(1.25rem, -10.0441rem + 14.1176vw, 2rem);
+    font-size: 1.25rem;
     color: rgb(215, 204, 204);
     padding-left: 3px;
 }
@@ -395,4 +384,7 @@ p{
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+}
+.contact p {
+    font-size: 2.5rem;
 }
